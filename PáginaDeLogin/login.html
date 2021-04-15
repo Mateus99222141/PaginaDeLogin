@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+    <form class="form" action="#">
+        <div class="card">
+            <h1 class="title">KidFlix</h1>
+            <div class="card-top">
+                <img class="imglogin" src="img/img.png" alt="">
+                <h2>Painel de Controle</h2>
+            </div>
+
+            <div class="card-group">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Digite seu email" required>
+            </div>
+
+            <div class="card-groupp btnn">
+                    <label>Senha</label>
+                    <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+                    
+                    <button type="button" onclick="mostrarSenha()">Mostrar senha</button>
+                
+                    <script>
+                        function mostrarSenha(){
+                            var tipo = document.getElementById("senha");
+                            if(tipo.type == "password"){
+                                tipo.type = "text";
+                            }else{
+                                tipo.type = "password";
+                            }
+                    }
+                    </script>
+            </div>
+
+            <div class="card-group">
+                <label><input type="checkbox">Lembre-me</label>
+            </div>
+
+            <div class="card-group btn">
+                <button type="submit">ACESSAR</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
